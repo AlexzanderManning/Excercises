@@ -1,0 +1,186 @@
+// //basic creation of objects
+
+// const elf = {
+//   name : 'Orwell',
+//   weapon: 'bow',
+//   attack(){
+//     return 'attack with '  + elf.weapon;
+//   }
+// }
+
+// const elf2 = {
+//   name : 'Reis',
+//   weapon: 'bow',
+//   attack(){
+//     return 'attack with '  + elf.weapon;
+//   }
+// }
+
+
+// console.log(elf.name);
+// console.log(elf.attack());
+// console.log(elf2.name);
+// console.log(elf2.attack());
+
+//Factory Functions 
+//creates a copy of an object each with its own copy of properties and methods.
+
+// function createElf ( name, weapon){
+//   return{
+//     name: name,
+//     weapon: weapon,
+//     attack(){
+//       return `${this.name} attacks with ${this.weapon}`;
+//     }
+//   }
+// }
+
+// const peter = createElf('Peter', 'stones');
+// console.log(peter.attack());
+
+
+// Prototypal inheritance with Object.create
+// const elf = { object protoype
+//   attack(who){
+//     console.log(`${this.name} attacks ${who.name} with ${this.weapon}`);
+//     return who.health = who.health - 1;
+//   }
+// }
+
+// function createElf ( name, weapon, health){
+//   let newElf = Object.create(elf); // creates object from prototype
+//   newElf.name = name; //adding properties to object once created
+//   newElf.weapon = weapon;
+//   newElf.health = health;
+//   return newElf;
+// }
+
+// const peter = createElf('Peter', 'stones', 3);
+// const paul = createElf('Paul', 'bow', 3);
+// console.log(peter.attack(paul));
+// console.log(paul.health);
+// console.log(paul.attack(peter));
+// console.log(peter.health);
+
+
+//Constructor functions
+// function Elf (name , weapon){
+//   this.name = name;
+//   this.weapon = weapon;
+// }
+// //Adding methods to function constructor prototype
+// Elf.prototype.attack = function(){
+//   return `${this.name} attacks with ${this.weapon}`;
+// }
+
+// const sam = new Elf('sam', 'fire');
+// console.log(sam.name);
+// console.log(sam.attack());
+
+//Classes
+// all method properties and methods are stored inside the class
+// class Elf {
+//   //creates prototype object
+//   constructor(name, weapon, health){// gets run everytime we instantiate a new object
+//     this.name = name;
+//     this.weapon = weapon;
+//     this.health = health;
+//   }
+//   attack(who){
+//         who.health = who.health - 1
+//         return `${this.name} attacks ${who.name} with ${this.weapon}`;
+//         // return ;
+//   }
+// }
+
+// const sam = new Elf('sam', 'fire', 5);
+// const reis = new Elf('Reis', 'ice', 5);
+// console.log(sam.name);
+// console.log(sam.attack(reis));
+// console.log("Reis health remaining =  " + reis.health);
+
+// Subclass
+class Character {// base/super class
+  //creates prototype object
+  constructor(name, weapon, health, power){// gets run everytime we instantiate a new object
+    this.name = name;
+    this.weapon = weapon;
+    this.health = health;
+    this.power = power;
+  }
+  attack(who){
+        who.health = who.health - this.power;
+        return `${this.name} attacks ${who.name} with ${this.weapon}`;
+        // return ;
+  }
+}
+
+class Elf extends Character{// sub class inherits from character class
+  constructor(name, weapon, health, power, type){
+    super(name, weapon, health, power);// 
+    this.type = type;
+  }
+}
+
+class Dragon extends Character{// sub class inherits from character class
+  constructor(name, weapon, health, power, type){
+    super(name, weapon, health, power);// 
+    this.type = type;
+  }
+}
+
+
+
+const sam = new Elf('sam', 'fire', 5, 5, 'dark');
+console.log(sam);
+
+const nicolBolas = new Dragon('Nicol Bolas', 'Dragon Breath', 20, 10, 'Dragon');
+console.log(nicolBolas);
+
+
+console.log(nicolBolas.attack(sam));
+console.log("Sam health remaining =  " + sam.health);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class person  {
+//   constructor(firstName, lastName){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   }
+
+//   greeting(){
+//     return `Hello there ${this.firstName} ${this.lastName}`;
+//   }
+// }
+
+// class customer extends person {
+//   constructor(firstName, lastName, phone, membership){
+//     super(firstName, lastName);// calls the parent class constructor 
+//     this.phone = phone;
+//     this.membership = membership;
+//   }
+
+//   static membershipCost(){
+//     return 500;
+//   }
+// }
+
+// const john = new customer('john', 'doe', '555-5555', 'standard');
+
+// console.log(john.greeting());
+// console.log(customer.membershipCost());

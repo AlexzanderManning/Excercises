@@ -1,0 +1,71 @@
+@import 'variables'; // basic partial import
+@import 'functions';
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: $light-color;
+  color: $dark-color;
+  font-family: $font-stack;
+  line-height: 1.5;
+}
+
+header{
+  background: $dark-color;
+  color: set-text-color($dark-color);
+  padding: 1rem;
+
+  h1{
+    text-align: center;
+  }
+}
+
+.section{ // basic nesting
+  padding: 3rem;
+
+  h3{
+    font-size: 2rem;
+  }
+
+  &-a{
+    background: $primary-color;
+    color: set-text-color($primary-color);;
+  }
+
+  &-b{
+    background: $secondary-color;
+    color: set-text-color($secondary-color);;
+  }
+}
+
+%btn-shared{ // basic extension
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: noe;
+  margin-top: 1rem;
+
+  &:hover{
+    @include transform(rotate(20deg));
+    background-color: darken($light-color, 10%);
+  }
+}
+
+.btn{
+  &-light{
+    @extend %btn-shared;
+    background-color: $light-color;
+    color:set-text-color($light-color);
+  }
+
+  &-dark{
+    @extend %btn-shared;
+    background-color: $dark-color;
+    color:set-text-color($dark-color);
+  }
+}
+

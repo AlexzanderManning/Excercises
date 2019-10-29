@@ -1,0 +1,163 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  max-width: 90%;
+  margin: 0 auto;
+}
+html{
+  font-family: sans-serif;
+}
+header{
+  background-color: #3B5998;
+  padding-top: 10px;
+  padding-bottom:3px;
+}
+header .logo-area{
+  display: inline-block;
+  width: 10%;
+}
+header .logo-area a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 60px;
+}
+header .menu{
+  color: white;
+  text-align: center;
+  display: inline-block;
+  width: 10%;
+  border-right: 1px solid rgba(255, 255, 255, .3);
+  word-spacing: 10px; 
+  font-size: 12px;
+  
+}
+header .menu ul li{
+  display: inline-block;
+}
+header .icon-links{
+  display: inline-block;
+  text-align: center;
+  width: 10%;
+  border-right: 1px solid rgba(255, 255, 255, .3);
+}
+header .icon-links ul li{
+  display: inline-block;
+}
+header .quick-options li{
+  margin-left: 8px;
+}
+header .quick-options a{
+  color:white;
+}
+header .privacy{
+  display: inline-block;
+  padding-left: 20px;
+  width:10%;
+}
+header .privacy a{
+  color: white;
+}
+header .search-area{
+  display: inline-block;
+  height: 2rem;
+  width: 50%;
+  margin-left: 8%;
+}
+header .search-area ul li{
+  display: inline-block;
+}
+header .search-area i {
+  color: white;
+}
+header .search-list{
+  margin: 0 0 0 40%;
+  /* background-color: red; */
+  height: 100%;
+  width:40%;
+}
+header .search-list li{
+display: inline-block;
+/* width:30%; */
+}
+header .search-list li:nth-of-type(1){
+  display: inline-block;
+}
+header .search-list li:nth-of-type(2){
+  display: inline-block;
+  width:80%;
+  }
+header .search-list input{
+  background-color: rgba(255, 255, 255, .1);
+  color: white;
+  border: 0px solid;
+  height: 1.5rem;
+  width:100%;
+  
+}
+.search-list ::placeholder{
+  text-align: left;
+  color:white;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+#top-area { 
+  padding: 5%;
+  background: url(https://wallpapercave.com/wp/wp2295407.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#top-area .user-img{
+  display: inline-block;
+  margin: 10% 1% 0 2% ;
+}
+#top-area .user-img img{
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#top-area .user-details{
+  font-weight: 300;
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+}
+#top-area .user-details h3{
+  color: white;
+  font-size: 1.3rem;
+}
+#top-area .user-details a{
+  font-size: .7rem;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(255, 255, 255,.4);
+  padding: 2px;
+  transition: background .2s ease-in-out;
+}
+
+#top-area .user-details a:hover{
+  background: #2196f3;
+}
+/* ////////////////////////////////////////////////////////////// */
+#content-area{
+
+}
+#content-area .side-column{
+  float: left;
+  width: 35%;
+  margin: 0 2.5%;
+  background: red;
+  height: 600px;
+}
+#content-area .main-area{
+  float: left;
+  width: 55%;
+  margin: 0 2.5%;
+  background: blue;
+  height: 600px;
+}

@@ -1,0 +1,54 @@
+/* body{
+  background: orange;
+} */
+
+li{
+  border: 2px solid red;
+}
+/* Syntax for using id selection */
+#special{
+  background: yellow;
+}
+/* Syntax for using class selection */
+.completed{
+  text-decoration: line-through;
+}
+
+/* Star */
+/* Selects Everything on the page */
+/* 
+  *{
+
+  } 
+*/
+
+/* Descendant Selectors */
+/* selects all choses nested tags within a chosen element  */
+
+/* Adjacent Selectors */
+/* It will select only the element that is immediately preceded by the former element. In this case, only the first paragraph after each ul will have red text. */
+/* ul + p {
+   color: red;
+} 
+selects all paragraphs after the ul
+*/
+
+
+
+/* Attribute Selectors */
+/* selects elements based on any attribute, images of a type, inputs of a particular type etc. 
+a[title] {
+   color: green;
+}
+
+
+*/
+
+/* nth of type */
+/* 
+selects every nth # of a type of element
+ul:nth-of-type(3){
+  background: blue;
+}
+*/
+

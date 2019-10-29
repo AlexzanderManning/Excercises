@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Do you prefer cats or dogs?</p>
+    <!-- If two inputs have same name attribute then it makes it a once or the other choice. -->
+    <!-- Inputs must have a value. The value name will be the data that is sent from the user's choice. -->
+    <form action="">
+      <label for="dogs">Dogs:</label>
+      <input id="dogs" type="radio" name="pet_choice" value="DOGS">
+      <label for="cats">Cats:</label>
+      <input id="cats" type="radio" name="pet_choice" value="CATS">
+      
+      <label>
+        <p>What's your favorite color?</p>
+        <select name="favorite_color">
+            <option name="red" value="red">red</option>
+            <option name="blue" value="blue">blue</option>
+            <option name="green" value="green">green</option>
+          </select>
+      </label>
+      <p>How are you feeling today?</p>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <br>
+      <button>Go!</button>
+    </form>
+  </body>
+</html>

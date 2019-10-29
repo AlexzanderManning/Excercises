@@ -1,0 +1,76 @@
+<!doctype html>
+<head>
+  <style>
+  :root {
+    box-sizing: border-box;
+  }
+
+  *,
+  ::before,
+  ::after {
+    box-sizing: inherit;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 2%;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 1em;
+  }
+
+  .grid > * {
+    background-color: darkgray;
+    color: white;
+    border-radius: 10%;
+  }
+
+  .square{
+    width: 0%;
+    /* content: ''; */
+    padding-bottom: 90%;
+   
+  }
+
+  .header{
+    grid-column: 1 / 1;
+    grid-row: 1;
+  }
+
+  .nav{
+    grid-column: 2 / 2;
+    grid-row: auto;
+  }
+
+  .main{
+    grid-column: 3 / 3;
+    grid-row: auto;
+  }
+
+  .section1{
+
+  }
+
+  .section2{
+
+  }
+
+  .footer{
+    /* grid-column: span 12;
+    grid-row: auto; */
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="header"><p class="square"></p></div>
+    <div class="nav"><p class="square"></p></div>
+    <div class="main"><p class="square"></p></div>
+    <div class="section1"><p class="square"></p></div>
+    <div class="section2"><p class="square"></p></div>
+    <div class="footer"><p class="square"></p></div>
+  </div>
+</body>
